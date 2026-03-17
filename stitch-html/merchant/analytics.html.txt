@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Merchant Customer Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d9488", // teal-600
+                        "primary-dark": "#0f766e", // teal-700
+                        "primary-light": "#f0fdfa", // teal-50
+                        "slate-custom": "#0f172a", // slate-900
+                        "slate-muted": "#64748b", // slate-500
+                        "slate-border": "#e2e8f0" // slate-200
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-display text-slate-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-border">
+<div class="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 py-4">
+<div class="flex items-center gap-3">
+<div class="size-9 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">insights</span>
+</div>
+<h1 class="text-slate-custom text-xl font-bold tracking-tight">Merchant Analytics</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-1 text-slate-muted text-sm font-medium">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Last 30 Days</span>
+</div>
+<div class="h-6 w-px bg-slate-border hidden md:block"></div>
+<div class="size-10 rounded-full bg-slate-200 overflow-hidden border border-slate-border cursor-pointer">
+<img alt="Merchant Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsajmrNpJ7D8YPqBdo6zTd_3YqOY7_BJv7gZTinT9KrQ3lsZfvoCGMFjEPMMA8eMHqd3dIHXSP9bbWZWzIxzcrpF_06NWFjpHfmv8EGT8eJoq5Fn9tN6JaDev8ihpKrAdgJtk9G4bOB_zSjCBWXIiH8IO1G0XezMHIKOO5B-YYRIp4dLEYvjqYzuHf2XbocK6EKAkzZWQjaLvjupH2W8X9WS3B36PHY10_uwVon5Q1-LmPpPcWg7XXrV5vaWLBVmyLja1Os-mubGeL"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1400px] mx-auto w-full px-6 md:px-10 py-8">
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold text-slate-custom tracking-tight">Customer Insights</h2>
+<p class="text-slate-muted font-medium mt-1">Detailed analytics for your business growth and customer retention.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="bg-white p-6 rounded-2xl border border-slate-border shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold bg-emerald-50 px-2 py-1 rounded-full">+12% vs LY</span>
+</div>
+<p class="text-slate-muted text-xs font-bold uppercase tracking-widest mb-1">Total Customers</p>
+<h3 class="text-3xl font-black text-slate-custom">12,482</h3>
+<p class="text-slate-muted text-xs mt-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        840 new this month
+                    </p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-border shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="size-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">pie_chart</span>
+</div>
+<span class="text-slate-muted text-xs font-bold">New vs Repeat</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative size-20">
+<svg class="size-full -rotate-90" viewBox="0 0 36 36">
+<circle class="stroke-slate-100" cx="18" cy="18" fill="none" r="16" stroke-width="4"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="65 100" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-xs font-bold">65%</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="text-xs font-bold text-slate-custom">Repeat (8.1k)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-slate-200"></div>
+<span class="text-xs font-bold text-slate-muted">New (4.3k)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-border shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="size-12 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<span class="text-slate-muted text-xs font-bold">Live Campaigns</span>
+</div>
+<p class="text-slate-muted text-xs font-bold uppercase tracking-widest mb-1">Campaign Participants</p>
+<h3 class="text-3xl font-black text-slate-custom">3,842</h3>
+<div class="w-full bg-slate-100 h-2 rounded-full mt-4 overflow-hidden">
+<div class="bg-orange-500 h-full w-3/4"></div>
+</div>
+<p class="text-slate-muted text-[10px] mt-2 font-medium">75% of monthly goal reached</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-slate-custom flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+                            Top Buyers
+                        </h3>
+<button class="text-primary text-xs font-bold uppercase tracking-widest hover:underline">Download Report</button>
+</div>
+<div class="bg-white rounded-2xl border border-slate-border overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 border-b border-slate-border">
+<th class="px-6 py-4 text-xs font-bold text-slate-muted uppercase tracking-wider">Customer</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-muted uppercase tracking-wider">Last Visit</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-muted uppercase tracking-wider">Total Spend</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-muted uppercase tracking-wider">Engagement</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-border">
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold">AS</div>
+<span class="text-sm font-semibold text-slate-custom">A****n S.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-muted">Yesterday</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-custom">₹14,250</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-md">High</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold">MK</div>
+<span class="text-sm font-semibold text-slate-custom">M****h K.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-muted">3 days ago</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-custom">₹9,820</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-md">High</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold">RV</div>
+<span class="text-sm font-semibold text-slate-custom">R****t V.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-muted">1 week ago</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-custom">₹8,400</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold uppercase rounded-md">Medium</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold">PD</div>
+<span class="text-sm font-semibold text-slate-custom">P****a D.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-muted">Oct 12, 2023</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-custom">₹7,650</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded-md">High</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 text-xs font-bold">SL</div>
+<span class="text-sm font-semibold text-slate-custom">S****l L.</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-muted">2 weeks ago</td>
+<td class="px-6 py-4 text-sm font-bold text-slate-custom">₹6,200</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold uppercase rounded-md">Medium</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-slate-50 border-t border-slate-border text-center">
+<button class="text-slate-muted text-sm font-bold hover:text-primary transition-colors">View All Top Buyers</button>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-custom flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+                        Growth Tips
+                    </h3>
+<div class="space-y-6">
+<div class="bg-primary-light border border-primary/20 rounded-2xl p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 size-20 bg-primary/5 rounded-full group-hover:scale-125 transition-transform"></div>
+<h4 class="text-primary font-bold text-lg mb-2">Convert New to Repeat</h4>
+<p class="text-slate-custom/70 text-sm leading-relaxed mb-4">
+                                Our data shows that 40% of your 'New' customers don't return within 30 days. Use a <strong>Targeted Retention Campaign</strong> offering a 10% discount on their second visit.
+                            </p>
+<button class="w-full py-3 bg-primary text-white rounded-xl text-xs font-bold uppercase tracking-widest hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+                                Launch Campaign
+                            </button>
+</div>
+<div class="bg-white border border-slate-border rounded-2xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="size-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">event_repeat</span>
+</div>
+<h4 class="font-bold text-slate-custom">Weekend Dip</h4>
+</div>
+<p class="text-slate-muted text-sm leading-relaxed">
+                                Footfall decreases by 15% on Sunday evenings. Consider a "Sunday Sundown" reward point multiplier to boost engagement.
+                            </p>
+</div>
+<div class="bg-slate-custom text-white rounded-2xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute right-0 bottom-0 opacity-10">
+<span class="material-symbols-outlined text-8xl">auto_awesome</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Smart Insights</h4>
+<p class="text-slate-300 text-sm mb-4">You have 12 customers who are likely to churn based on recent activity patterns.</p>
+<a class="text-primary text-xs font-bold uppercase flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                View Churn Risk List
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 border-t border-slate-border py-8 bg-white">
+<div class="max-w-[1400px] mx-auto px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-slate-muted text-xs font-medium">© 2024 MerchantRewards Analytics Platform. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<a class="text-slate-muted text-xs hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-muted text-xs hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-muted text-xs hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

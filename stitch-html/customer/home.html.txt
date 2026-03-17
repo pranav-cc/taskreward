@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refined Activity Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "teal-dark": "#134e4a",
+                        "indigo-custom": "#1e1b4b",
+                        "mint-bg": "#f0fdfa",
+                        "mint-overlay": "#ccfbf1",
+                        "accent-yellow": "#facc15",
+                        "whatsapp": "#25D366",
+                        "urgent-red": "#fef2f2",
+                        "urgent-text": "#991b1b",
+                        "verified-green": "#22c55e"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute top-0 left-0 w-full h-[320px] bg-mint-overlay rounded-b-[4rem] z-0 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-around opacity-[0.03] pointer-events-none select-none text-teal-dark">
+<span class="material-symbols-outlined text-[240px]">shopping_bag</span>
+<span class="material-symbols-outlined text-[180px]">redeem</span>
+<span class="material-symbols-outlined text-[200px]">card_giftcard</span>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<header class="flex items-center justify-between px-6 md:px-20 py-6 bg-transparent">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-indigo-custom rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">stars</span>
+</div>
+<h2 class="text-indigo-custom text-xl font-extrabold tracking-tight">TaskRewards</h2>
+</div>
+<div class="flex items-center gap-8">
+<button class="flex items-center justify-center rounded-full h-11 px-6 bg-white shadow-sm text-indigo-custom font-bold text-sm border border-teal-dark/5 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-[22px] mr-2 text-primary">payments</span>
+                    ₹1,240
+                </button>
+<div class="size-11 rounded-full bg-white overflow-hidden border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANGZFeS7qf-gAdT0kB5gE1ZoTOczleYOeIBosW6R0EuCwVLi36ri7u_5iRJRyZ6SKSLTEAzm7jLxPnu4bvOTyE4o1RR__v_8e7DfNpJMpfrRqy9S2QRfF3-qv1KnCd3xwRLrWIdlclCCo33o-tPBPiSpkfss_x449ns7G0j6GNbQXIT8dbukq9hAl2xmVNY-2X8Hby1nstL39JYk0MXo1R1xEHe_fgh504BcqYOUtqAbPBj4ZsVBuK2nLIp26tDYYizCyL322TLsIm"/>
+</div>
+</div>
+</header>
+<nav class="px-6 md:px-20 mb-8 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-8 min-w-max border-b border-indigo-custom/10 pb-4">
+<a class="text-indigo-custom font-bold text-sm border-b-2 border-primary pb-4 -mb-4" href="#">Home</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Deals</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Points</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Tasks</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Refer a Friend</a>
+</div>
+</nav>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-4 md:px-10 py-4 pb-32">
+<div class="mb-10">
+<h1 class="text-4xl md:text-5xl font-extrabold text-indigo-custom tracking-tight mb-2">Hello, Arjun!</h1>
+<p class="text-indigo-custom/60 font-semibold text-lg">You're just 2 tasks away from your next reward.</p>
+</div>
+<section class="mb-14">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+<div class="flex gap-6 items-center">
+<div class="size-40 md:size-48 bg-primary rounded-full flex flex-col items-center justify-center text-white shadow-2xl shadow-primary/30 border-[6px] border-white relative">
+<span class="text-[10px] font-black uppercase tracking-widest opacity-80 mb-1">Available</span>
+<h3 class="text-4xl md:text-5xl font-black">2,450</h3>
+<span class="text-[10px] font-bold opacity-80 mt-1">POINTS</span>
+</div>
+<div class="size-32 md:size-36 bg-accent-yellow rounded-full flex flex-col items-center justify-center text-yellow-950 shadow-xl shadow-yellow-200/50 border-[4px] border-white relative">
+<span class="text-[9px] font-black uppercase tracking-widest opacity-70 mb-0.5 text-center px-4 leading-tight">Under Review</span>
+<h3 class="text-2xl md:text-3xl font-black">450</h3>
+<span class="text-[9px] font-bold opacity-70">POINTS</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 w-full gap-4">
+<div class="bg-white rounded-3xl p-6 shadow-xl shadow-indigo-custom/5 border border-indigo-custom/5 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">event</span>
+</div>
+<div>
+<p class="text-indigo-custom/40 text-[10px] font-bold uppercase tracking-widest leading-none mb-1">Next Expiry</p>
+<p class="text-primary font-black text-xl leading-none">120 pts <span class="text-indigo-custom/40 text-xs ml-1">• 3 days left</span></p>
+</div>
+</div>
+<button class="bg-indigo-custom text-white px-6 py-3 rounded-2xl font-bold text-sm shadow-lg shadow-indigo-900/10 hover:bg-teal-dark transition-colors">
+                                    Redeem Now
+                                </button>
+</div>
+<div class="px-2 flex items-center justify-center md:justify-start gap-4">
+<p class="text-indigo-custom/50 text-[11px] font-bold tracking-wide uppercase">
+                                    Lifetime Savings: <span class="text-indigo-custom font-black">₹15,420</span>
+</p>
+<div class="w-1 h-1 rounded-full bg-indigo-custom/20"></div>
+<p class="text-indigo-custom/50 text-[11px] font-bold tracking-wide uppercase">
+                                    Expired: <span class="text-slate-400 font-black">840 pts</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-14">
+<div class="relative bg-gradient-to-r from-teal-dark to-indigo-custom rounded-[2.5rem] p-8 overflow-hidden shadow-xl shadow-teal-900/20">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+<div>
+<h2 class="text-2xl font-black text-white mb-2">Newly Launched Deals</h2>
+<p class="text-white/60 font-medium">Flash sale on premium organic brands</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<div class="bg-white/10 rounded-xl size-14 flex items-center justify-center text-white text-xl font-bold border border-white/10">04</div>
+<span class="text-[9px] font-bold text-white/50 uppercase mt-1">Hrs</span>
+</div>
+<div class="text-white font-bold text-xl mb-4">:</div>
+<div class="flex flex-col items-center">
+<div class="bg-white/10 rounded-xl size-14 flex items-center justify-center text-white text-xl font-bold border border-white/10">52</div>
+<span class="text-[9px] font-bold text-white/50 uppercase mt-1">Min</span>
+</div>
+<div class="text-white font-bold text-xl mb-4">:</div>
+<div class="flex flex-col items-center">
+<div class="bg-white/10 rounded-xl size-14 flex items-center justify-center text-white text-xl font-bold border border-white/10">18</div>
+<span class="text-[9px] font-bold text-white/50 uppercase mt-1">Sec</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-center">
+<div class="bg-urgent-red border border-primary/20 px-6 py-3 rounded-full flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="size-6 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm font-bold">notification_important</span>
+</div>
+<p class="text-urgent-text font-black text-sm uppercase tracking-tight">
+                            Hurry! 3 of your Favourites are expiring soon!
+                        </p>
+<span class="material-symbols-outlined text-primary text-xl">arrow_forward_ios</span>
+</div>
+</div>
+</section>
+<div class="space-y-16">
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined fill-1">analytics</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Your Activity Summary</h2>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-2">Deals Claimed</p>
+<p class="text-2xl font-black">24</p>
+<p class="text-[10px] text-emerald-500 font-bold mt-1">8 Offered • 2 Missed</p>
+</div>
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-2">Tasks Completed</p>
+<p class="text-2xl font-black text-indigo-custom">42</p>
+<p class="text-[10px] text-slate-400 font-bold mt-1">58 Allocated</p>
+</div>
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-2">Missed Tasks</p>
+<p class="text-2xl font-black text-primary">06</p>
+<p class="text-[10px] text-slate-400 font-bold mt-1">Time Expired</p>
+</div>
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-2">Incomplete tasks</p>
+<p class="text-2xl font-black text-accent-yellow">10</p>
+<p class="text-[10px] text-slate-400 font-bold mt-1">Action Required</p>
+</div>
+</div>
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/10">
+<p class="text-indigo-custom font-bold text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
+                            You're 150 points away from a Gold badge! Keep going!
+                        </p>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined fill-1">pending_actions</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Continue Working</h2>
+</div>
+<button class="text-primary text-xs font-black uppercase tracking-widest hover:underline">See All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[300px] md:min-w-[340px] bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-indigo-custom/5">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-accent-yellow/10 text-yellow-700 text-[10px] font-black uppercase rounded-full">In Progress</span>
+<p class="text-primary font-black text-xl">+500 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-1">Buy Milk at Daily Fresh</h3>
+<p class="text-slate-400 font-bold text-xs mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Remaining: 02:45:10
+                            </p>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black shadow-lg shadow-indigo-900/10">Resume Task</button>
+</div>
+<div class="min-w-[300px] md:min-w-[340px] bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-indigo-custom/5">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-accent-yellow/10 text-yellow-700 text-[10px] font-black uppercase rounded-full">In Progress</span>
+<p class="text-primary font-black text-xl">+1,200 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-1">Review "The Grand Hotel"</h3>
+<p class="text-slate-400 font-bold text-xs mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">photo_camera</span> Awaiting Photo
+                            </p>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black shadow-lg shadow-indigo-900/10">Resume Task</button>
+</div>
+</div>
+</section>
+<section class="py-2">
+<div class="bg-teal-dark rounded-[3rem] p-1 border-4 border-emerald-400/20 shadow-2xl overflow-hidden relative group">
+<div class="bg-teal-dark rounded-[2.75rem] p-8 flex flex-col md:flex-row items-center gap-8 relative z-10">
+<div class="size-24 bg-white rounded-3xl flex items-center justify-center shrink-0 shadow-xl overflow-hidden">
+<span class="material-symbols-outlined text-5xl text-amber-600">potted_plant</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<span class="bg-amber-400/20 text-amber-400 text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest mb-3 inline-block border border-amber-400/20">Nature's Buzz Raw Honey</span>
+<h3 class="text-2xl font-black text-white">Sweet Rewards: 100% Pure Raw Honey</h3>
+<p class="text-emerald-100/70 font-medium mt-1">Get 40% OFF on your first purchase plus earn 1,500 bonus points.</p>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-emerald-500 text-white font-black rounded-2xl hover:scale-105 transition-transform shadow-xl shadow-emerald-500/40">Apply Now</button>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined fill-1">bolt</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">New Tasks Near You</h2>
+</div>
+<button class="text-primary text-xs font-black uppercase tracking-widest hover:underline">See All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[300px] md:min-w-[340px] bg-white p-6 pt-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border-2 border-primary/20 relative">
+<div class="absolute top-3 right-6 px-4 py-1.5 bg-primary text-white text-[10px] font-black uppercase rounded-full shadow-lg flex items-center gap-1.5 z-20">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+                                Expiring Soon
+                            </div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase rounded-full">Available Now</span>
+<p class="text-indigo-custom font-black text-xl">+250 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-1">Scan at Sharma Bakery</h3>
+<p class="text-slate-400 font-bold text-xs mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> 0.5 km away • 15 min
+                            </p>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black hover:bg-teal-dark transition-all">Start Task</button>
+</div>
+<div class="min-w-[300px] md:min-w-[340px] bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-indigo-custom/5">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase rounded-full">Quick Task</span>
+<p class="text-indigo-custom font-black text-xl">+150 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-1">Validate Price: Mega Mart</h3>
+<p class="text-slate-400 font-bold text-xs mb-6 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> 1.2 km away • 5 min
+                            </p>
+<button class="w-full py-3.5 border-2 border-indigo-custom text-indigo-custom rounded-2xl text-sm font-black hover:bg-indigo-custom hover:text-white transition-all">Start Task</button>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Recently Completed</h2>
+</div>
+<button class="text-primary text-xs font-black uppercase tracking-widest hover:underline">See All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-50 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                                </div>
+<p class="text-slate-500 font-black text-lg">+200 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">Share Referral Link</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed 2h ago</p>
+</div>
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-50 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                                </div>
+<p class="text-slate-500 font-black text-lg">+1,500 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">Buy 1kg Raw Honey</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed yesterday</p>
+</div>
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-50 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                                </div>
+<p class="text-slate-500 font-black text-lg">+100 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">App Feedback Survey</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed 2 days ago</p>
+</div>
+</div>
+</section>
+<section class="pb-10">
+<div class="bg-gradient-to-br from-whatsapp/10 to-whatsapp/20 border-2 border-whatsapp/20 rounded-[2.5rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-whatsapp/10">
+<div class="flex items-center gap-6">
+<div class="size-16 bg-whatsapp rounded-2xl flex items-center justify-center text-white shadow-lg">
+<svg class="w-10 h-10 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-xl font-black text-indigo-custom">Refer &amp; Earn Together</h3>
+<p class="text-indigo-custom/60 font-medium">Earn ₹200 for every friend who completes their first task.</p>
+</div>
+</div>
+<button class="w-full md:w-auto px-8 py-4 bg-whatsapp text-white font-black rounded-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-lg shadow-whatsapp/20">
+                            Share on WhatsApp
+                        </button>
+</div>
+</section>
+</div>
+</main>
+<footer class="lg:hidden bg-white/90 backdrop-blur-xl border-t border-slate-100 fixed bottom-0 w-full px-8 py-4 z-50 flex justify-between items-center pb-safe">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-black">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-black">Tasks</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-10" href="#">
+<div class="bg-indigo-custom size-14 rounded-full flex items-center justify-center text-white shadow-2xl shadow-indigo-900/40 ring-4 ring-white">
+<span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+</div>
+<span class="text-[10px] font-black text-indigo-custom mt-2">Scan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-[10px] font-black">Rewards</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black">Profile</span>
+</a>
+</footer>
+</div>
+</div>
+
+</body></html>

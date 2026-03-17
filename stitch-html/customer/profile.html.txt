@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refined User Profile Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-primary": "#0d9488",
+                        "brand-secondary": "#134e4a",
+                        "mint-bg": "#f0fdfa",
+                        "mint-overlay": "#ccfbf1",
+                        "pista-light": "#d1fae5",
+                        "indigo-custom": "#1e1b4b",
+                        "verified-green": "#10b981",
+                        "soft-gray": "#94a3b8",
+                        "warning-orange": "#f97316"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .floating-label-input:focus-within label,
+            .floating-label-input input:not(:placeholder-shown) + label {
+                transform: translateY(-1.5rem) scale(0.85);
+                color: #0d9488;
+            }
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute top-0 left-0 w-full h-[400px] bg-mint-overlay rounded-b-[4rem] z-0 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-around opacity-[0.05] pointer-events-none select-none text-brand-secondary">
+<span class="material-symbols-outlined text-[240px]">person</span>
+<span class="material-symbols-outlined text-[180px]">settings</span>
+<span class="material-symbols-outlined text-[200px]">verified_user</span>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<header class="flex items-center justify-between px-6 md:px-20 py-6 bg-transparent">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-brand-secondary rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">stars</span>
+</div>
+<h2 class="text-brand-secondary text-xl font-extrabold tracking-tight">TaskRewards</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="size-11 rounded-full bg-white overflow-hidden border-2 border-white shadow-md">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANGZFeS7qf-gAdT0kB5gE1ZoTOczleYOeIBosW6R0EuCwVLi36ri7u_5iRJRyZ6SKSLTEAzm7jLxPnu4bvOTyE4o1RR__v_8e7DfNpJMpfrRqy9S2QRfF3-qv1KnCd3xwRLrWIdlclCCo33o-tPBPiSpkfss_x449ns7G0j6GNbQXIT8dbukq9hAl2xmVNY-2X8Hby1nstL39JYk0MXo1R1xEHe_fgh504BcqYOUtqAbPBj4ZsVBuK2nLIp26tDYYizCyL322TLsIm"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[900px] mx-auto w-full px-4 md:px-10 py-6 pb-48">
+<section class="mb-10 text-center flex flex-col items-center">
+<div class="relative mb-4">
+<div class="size-32 md:size-40 rounded-full border-4 border-white shadow-xl overflow-hidden bg-white">
+<img alt="Arjun" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANGZFeS7qf-gAdT0kB5gE1ZoTOczleYOeIBosW6R0EuCwVLi36ri7u_5iRJRyZ6SKSLTEAzm7jLxPnu4bvOTyE4o1RR__v_8e7DfNpJMpfrRqy9S2QRfF3-qv1KnCd3xwRLrWIdlclCCo33o-tPBPiSpkfss_x449ns7G0j6GNbQXIT8dbukq9hAl2xmVNY-2X8Hby1nstL39JYk0MXo1R1xEHe_fgh504BcqYOUtqAbPBj4ZsVBuK2nLIp26tDYYizCyL322TLsIm"/>
+</div>
+<button class="absolute bottom-2 right-2 size-10 bg-brand-primary text-white rounded-full flex items-center justify-center shadow-lg border-4 border-white hover:bg-brand-secondary transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+</div>
+<h1 class="text-3xl md:text-4xl font-extrabold text-indigo-custom mb-2">Hello, Arjun</h1>
+<div class="flex flex-col items-center gap-2 mb-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-white rounded-full shadow-lg shadow-yellow-500/20">
+<span class="material-symbols-outlined text-sm fill-1">military_tech</span>
+<span class="text-xs font-black uppercase tracking-widest">Gold Member</span>
+</div>
+<p class="text-[11px] font-bold text-indigo-custom/40 uppercase tracking-widest">Member since Jan 2024</p>
+</div>
+<div class="flex items-center gap-2 text-indigo-custom/60 font-semibold mb-8">
+<span class="material-symbols-outlined text-verified-green text-lg">verified</span>
+<span>+91 98765 43210</span>
+</div>
+<div class="w-full max-w-md bg-white p-6 rounded-3xl border border-indigo-custom/5 shadow-sm">
+<div class="flex justify-between items-center mb-3">
+<span class="text-xs font-black uppercase tracking-wider text-indigo-custom/40">Profile Completion</span>
+<span class="text-sm font-black text-brand-primary">60%</span>
+</div>
+<div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden mb-3">
+<div class="h-full bg-brand-primary w-3/5 rounded-full"></div>
+</div>
+<p class="text-xs font-medium text-indigo-custom/60">Complete profile to unlock bonus rewards.</p>
+</div>
+</section>
+<div class="space-y-4">
+<details class="group bg-white rounded-2xl border border-indigo-custom/5 shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+<span class="material-symbols-outlined">person_outline</span>
+</div>
+<h3 class="font-bold text-lg text-indigo-custom">Basic Information</h3>
+</div>
+<span class="material-symbols-outlined text-indigo-custom/40 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-8 pt-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="fname" placeholder=" " type="text" value="Arjun"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="fname">First Name</label>
+</div>
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="lname" placeholder=" " type="text" value="Mehta"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="lname">Last Name</label>
+</div>
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="birthday" placeholder=" " type="date"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="birthday">Birthday <span class="text-[10px] opacity-60 font-medium tracking-tight">(Optional)</span></label>
+</div>
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="secondary_mobile" placeholder=" " type="tel"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="secondary_mobile">Secondary Mobile Number <span class="text-[10px] opacity-60 font-medium tracking-tight">(Optional)</span></label>
+</div>
+<div class="relative floating-label-input md:col-span-2">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="pincode" placeholder=" " type="text" value="400001"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="pincode">Pincode</label>
+</div>
+</div>
+</div>
+</details>
+<details class="group bg-white rounded-2xl border-2 border-warning-orange/30 shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div class="flex items-center gap-3">
+<h3 class="font-bold text-lg text-indigo-custom">Contact Preferences</h3>
+<span class="px-2 py-0.5 bg-warning-orange/10 text-warning-orange text-[10px] font-black uppercase rounded-lg border border-warning-orange/20">Missing Info</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-indigo-custom/40 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-8 pt-2 space-y-6">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-orange-50/50 rounded-2xl border border-warning-orange/10">
+<div class="flex items-center gap-3 w-full md:w-auto">
+<span class="material-symbols-outlined text-warning-orange">mail</span>
+<p class="font-bold text-indigo-custom italic opacity-50">email@example.com</p>
+</div>
+<button class="w-full md:w-auto px-6 py-2 bg-warning-orange text-white text-xs font-black uppercase tracking-wider rounded-xl shadow-md shadow-orange-500/20 hover:scale-105 transition-transform">Verify</button>
+</div>
+<div class="flex items-center justify-between px-2">
+<div>
+<p class="font-bold text-indigo-custom">WhatsApp Updates</p>
+<p class="text-xs text-indigo-custom/60">Get reward alerts directly on WhatsApp</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-primary"></div>
+</label>
+</div>
+</div>
+</details>
+<details class="group bg-white rounded-2xl border-2 border-warning-orange/30 shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="flex items-center gap-3">
+<h3 class="font-bold text-lg text-indigo-custom">Saved Addresses</h3>
+<span class="px-2 py-0.5 bg-warning-orange/10 text-warning-orange text-[10px] font-black uppercase rounded-lg border border-warning-orange/20">Missing Info</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-indigo-custom/40 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-8 pt-2 space-y-4">
+<div class="p-5 rounded-2xl border border-brand-primary/20 bg-brand-primary/5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="size-10 bg-white rounded-xl flex items-center justify-center text-brand-primary shadow-sm">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-black text-indigo-custom">My Flat</span>
+<span class="px-2 py-0.5 bg-brand-primary/10 text-brand-primary text-[9px] font-black uppercase rounded-full border border-brand-primary/20">Home</span>
+<span class="px-2 py-0.5 bg-brand-primary text-white text-[9px] font-black uppercase rounded-full">Default</span>
+</div>
+<p class="text-xs text-indigo-custom/60 leading-relaxed max-w-xs">202, Skyline Apartments, MG Road, Mumbai, Maharashtra 400001</p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end md:self-center">
+<button class="size-9 bg-white rounded-full flex items-center justify-center text-indigo-custom/40 hover:text-brand-primary transition-colors border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="size-9 bg-white rounded-full flex items-center justify-center text-indigo-custom/40 hover:text-red-500 transition-colors border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+<div class="p-5 rounded-2xl border border-slate-100 bg-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<div class="size-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 shadow-sm">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-black text-indigo-custom">Office HQ</span>
+<span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase rounded-full border border-slate-200">Work</span>
+</div>
+<p class="text-xs text-indigo-custom/60 leading-relaxed max-w-xs">Level 4, Corporate Park, BKC, Mumbai, Maharashtra 400051</p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end md:self-center">
+<button class="size-9 bg-white rounded-full flex items-center justify-center text-indigo-custom/40 hover:text-brand-primary transition-colors border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="size-9 bg-white rounded-full flex items-center justify-center text-indigo-custom/40 hover:text-red-500 transition-colors border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+<button class="w-full py-4 border-2 border-dashed border-slate-200 rounded-2xl text-sm font-black text-indigo-custom/40 hover:border-brand-primary hover:text-brand-primary transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                            Add New Address
+                        </button>
+</div>
+</details>
+<details class="group bg-white rounded-2xl border border-indigo-custom/5 shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-indigo-custom">Withdrawal Settings</h3>
+<div class="flex items-center gap-1 text-brand-primary text-[10px] font-black uppercase tracking-tighter">
+<span class="material-symbols-outlined text-xs">verified_user</span>
+                                    Secure &amp; Encrypted
+                                </div>
+</div>
+</div>
+<span class="material-symbols-outlined text-indigo-custom/40 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-8 pt-2 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="upi_id" placeholder=" " type="text"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="upi_id">UPI ID (e.g. user@bank)</label>
+</div>
+<div class="relative floating-label-input">
+<input class="w-full pt-6 pb-2 px-0 border-0 border-b-2 border-slate-200 focus:ring-0 focus:border-brand-primary transition-colors text-indigo-custom font-bold text-base bg-transparent" id="bank_acc" placeholder=" " type="text"/>
+<label class="absolute left-0 top-6 text-indigo-custom/40 pointer-events-none transition-all origin-left font-bold text-sm" for="bank_acc">Bank Account Number</label>
+</div>
+</div>
+<p class="text-[10px] text-indigo-custom/40 italic flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Payments are processed within 24-48 business hours.
+                        </p>
+</div>
+</details>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 w-full z-[60] px-4 pb-8 pt-12 bg-gradient-to-t from-mint-bg via-mint-bg/90 to-transparent pointer-events-none">
+<div class="max-w-[800px] mx-auto flex flex-col items-center gap-4 pointer-events-auto">
+<button class="w-full md:w-[400px] bg-brand-primary text-white py-4 rounded-full font-black text-sm uppercase tracking-widest shadow-2xl shadow-brand-primary/30 hover:scale-[1.02] transition-transform active:scale-95">
+                    Save Changes
+                </button>
+<a class="text-indigo-custom/40 hover:text-red-500 text-sm font-black uppercase tracking-wider transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+                    Logout Account
+                </a>
+</div>
+</div>
+<footer class="lg:hidden bg-white/90 backdrop-blur-xl border-t border-slate-100 fixed bottom-0 w-full px-8 py-4 z-[70] flex justify-between items-center pb-safe">
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-black">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-black">Tasks</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-10" href="#">
+<div class="bg-brand-secondary size-14 rounded-full flex items-center justify-center text-white shadow-2xl shadow-indigo-900/40 ring-4 ring-white">
+<span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+</div>
+<span class="text-[10px] font-black text-brand-secondary mt-2">Scan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-[10px] font-black">Rewards</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-brand-primary" href="#">
+<span class="material-symbols-outlined fill-1">person</span>
+<span class="text-[10px] font-black">Profile</span>
+</a>
+</footer>
+</div>
+</div>
+
+</body></html>

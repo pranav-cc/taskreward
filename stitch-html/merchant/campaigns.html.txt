@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Merchant Campaign &amp; Deal Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "merchant-blue": "#0f172a",
+                        "surface-50": "#f8fafc",
+                        "surface-100": "#f1f5f9",
+                        "surface-200": "#e2e8f0",
+                        "verified-green": "#22c55e",
+                        "whatsapp": "#25D366"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .glass-morphism {
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(12px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface-50 font-display text-merchant-blue min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-merchant-blue text-white flex flex-col shrink-0">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">storefront</span>
+</div>
+<h2 class="font-extrabold tracking-tight text-lg">MerchantHub</h2>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-white/10 rounded-xl font-bold" href="#">
+<span class="material-symbols-outlined">campaign</span>
+                    Campaigns
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl font-medium text-white/70 transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                    Deals &amp; Stock
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl font-medium text-white/70 transition-colors" href="#">
+<span class="material-symbols-outlined">insights</span>
+                    Analytics
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl font-medium text-white/70 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+                    Payouts
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-xl font-medium text-white/70 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Store Settings
+                </a>
+</nav>
+<div class="p-6 border-t border-white/10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-surface-200 overflow-hidden">
+<img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoVUNnJI2xVipWqPALIBAQvbatL2T7YHjbsyHJ7oCYtPGAT9jweTlLCltdL8Pcvk6BewKlykZF5cbqmeVpv1pUt9n2OfWZRJxBloxucYL2jzZ_XQdA9QwBfloqxbK-1VcTtowG67AV7X_k6P_jtuG1Ot6Gg85-NBNKrDFgSZVYQRaBTRmCWk60qK2WIYXs2e7T0JnZq4tJRD6W6Rb3DKinPRsHvLIGuSnqh26filYVIqiKEo_Fpm9tWHBtr39nYGe1E78hOBLZiebL"/>
+</div>
+<div class="overflow-hidden">
+<p class="font-bold text-sm truncate">Ramesh General Store</p>
+<p class="text-[10px] text-white/50 uppercase font-black">Tier 2 Verified</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col min-w-0 bg-white">
+<header class="h-20 border-b border-surface-200 flex items-center justify-between px-10 shrink-0">
+<div>
+<h1 class="text-2xl font-black tracking-tight">Campaign &amp; Deal Manager</h1>
+<p class="text-sm text-slate-500 font-medium">Create rewards and manage store offers</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="size-10 rounded-full border border-surface-200 flex items-center justify-center text-slate-400 hover:bg-surface-50 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-merchant-blue text-white px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-merchant-blue/10">
+                        Publish Campaign
+                    </button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto no-scrollbar p-10 flex gap-10">
+<div class="flex-1 space-y-12 pb-20">
+<section>
+<div class="flex items-center gap-3 mb-8">
+<div class="size-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">add_task</span>
+</div>
+<h3 class="text-xl font-black">Campaign Creator</h3>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-8 space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">Campaign Name</label>
+<input class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-medium" placeholder="e.g. Summer Loyalty Fest" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">Campaign Type</label>
+<select class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-medium">
+<option>Buy X times → Unlock Bonus</option>
+<option>Spend ₹X → Get % Back</option>
+<option>Visit Store → Flat Points</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">Start Date</label>
+<input class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-medium" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">End Date</label>
+<input class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-medium" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">Min. Visits/Criteria</label>
+<div class="relative">
+<input class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-black" type="number" value="3"/>
+<span class="absolute right-4 top-3.5 text-xs font-bold text-slate-400">times</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-black uppercase tracking-wider text-slate-400">Bonus Percentage</label>
+<div class="relative">
+<input class="w-full bg-surface-50 border-surface-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary font-black" type="number" value="15"/>
+<span class="absolute right-4 top-3.5 text-xs font-bold text-slate-400">%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-surface-50 rounded-3xl p-6 border border-surface-200">
+<h4 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-6">Estimated Payout</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium text-slate-600">Avg. Basket Value</span>
+<span class="font-bold">₹450</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium text-slate-600">Est. Redemptions</span>
+<span class="font-bold">120/mo</span>
+</div>
+<div class="border-t border-surface-200 pt-4 mt-4">
+<p class="text-[10px] font-black uppercase text-slate-400 mb-1">Total Budget Required</p>
+<p class="text-3xl font-black text-merchant-blue">₹16,200</p>
+</div>
+<div class="bg-verified-green/10 p-3 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-verified-green text-lg">verified</span>
+<span class="text-[10px] font-bold text-verified-green leading-tight">Optimized for Tier-2 markets</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-2xl bg-merchant-blue/5 flex items-center justify-center text-merchant-blue">
+<span class="material-symbols-outlined">inventory</span>
+</div>
+<h3 class="text-xl font-black">Active Store Deals</h3>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-lg">add</span>
+                                Add New Deal
+                            </button>
+</div>
+<div class="overflow-hidden border border-surface-200 rounded-3xl">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-50 border-b border-surface-200">
+<tr>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-wider text-slate-400">Product Name</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-wider text-slate-400">MRP</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-wider text-slate-400">Deal Price</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-wider text-slate-400">Stock</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-wider text-slate-400">Points Redemption</th>
+<th class="px-6 py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-200">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-surface-100 rounded-lg flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">fastfood</span>
+</div>
+<span class="font-bold">Organic Basmati Rice (5kg)</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium text-slate-400 line-through">₹850</td>
+<td class="px-6 py-4 font-black text-primary">₹699</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-surface-100 rounded-full text-xs font-bold text-slate-600">42 units</span>
+</td>
+<td class="px-6 py-4">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-verified-green"></div>
+</label>
+</td>
+<td class="px-6 py-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-merchant-blue">more_vert</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-surface-100 rounded-lg flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+<span class="font-bold">Premium Detergent Pack</span>
+</div>
+</td>
+<td class="px-6 py-4 font-medium text-slate-400 line-through">₹240</td>
+<td class="px-6 py-4 font-black text-primary">₹180</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-red-100 rounded-full text-xs font-bold text-red-600">08 units (Low)</span>
+</td>
+<td class="px-6 py-4">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-verified-green"></div>
+</label>
+</td>
+<td class="px-6 py-4">
+<button class="material-symbols-outlined text-slate-400 hover:text-merchant-blue">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<aside class="w-[380px] shrink-0">
+<div class="sticky top-0 bg-surface-100 p-8 rounded-[3rem] border-8 border-merchant-blue/5 shadow-2xl">
+<div class="flex justify-between items-center mb-6 px-4">
+<span class="text-xs font-black tracking-widest text-slate-400 uppercase">Live Preview</span>
+<div class="flex gap-1.5">
+<div class="size-2 rounded-full bg-slate-300"></div>
+<div class="size-2 rounded-full bg-slate-300"></div>
+<div class="size-2 rounded-full bg-slate-200"></div>
+</div>
+</div>
+<div class="bg-[#f0fdfa] rounded-[2rem] aspect-[9/18.5] overflow-hidden border border-white shadow-inner flex flex-col">
+<div class="p-6 pb-2">
+<div class="flex justify-between items-center mb-4">
+<span class="material-symbols-outlined text-merchant-blue">arrow_back</span>
+<span class="font-black text-sm text-merchant-blue">Store Rewards</span>
+<span class="material-symbols-outlined text-merchant-blue">share</span>
+</div>
+</div>
+<div class="px-4 flex-1 space-y-6 overflow-y-auto no-scrollbar pb-10">
+<div class="bg-white rounded-3xl p-5 shadow-sm border border-slate-100">
+<div class="flex justify-between items-start mb-4">
+<div class="size-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">stars</span>
+</div>
+<div class="bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">15% Bonus</div>
+</div>
+<h4 class="font-black text-lg text-merchant-blue leading-tight mb-1">Summer Loyalty Fest</h4>
+<p class="text-[10px] text-slate-400 font-bold uppercase mb-4">Expires in 12 days</p>
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<p class="text-xs font-bold text-slate-500">Your Progress</p>
+<p class="text-xs font-black text-primary">1 / 3 Visits</p>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-1/3 h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[9px] text-slate-400 italic">Complete 2 more visits to unlock reward</p>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-1">Exclusive Deals</p>
+<div class="flex gap-4 overflow-x-auto no-scrollbar -mx-1 px-1">
+<div class="min-w-[140px] bg-white p-3 rounded-2xl border border-slate-100">
+<div class="h-20 bg-slate-50 rounded-xl mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300 text-3xl">shopping_basket</span>
+</div>
+<p class="text-[11px] font-bold text-merchant-blue leading-tight">Basmati Rice 5kg</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-xs font-black text-primary">₹699</span>
+<span class="text-[9px] text-slate-400 line-through">₹850</span>
+</div>
+</div>
+<div class="min-w-[140px] bg-white p-3 rounded-2xl border border-slate-100">
+<div class="h-20 bg-slate-50 rounded-xl mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-300 text-3xl">soap</span>
+</div>
+<p class="text-[11px] font-bold text-merchant-blue leading-tight">Detergent Pack</p>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="text-xs font-black text-primary">₹180</span>
+<span class="text-[9px] text-slate-400 line-through">₹240</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white border-t border-slate-100 p-4 pt-2">
+<button class="w-full bg-merchant-blue text-white py-3 rounded-xl font-bold text-xs shadow-lg">Check-in at Store</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>

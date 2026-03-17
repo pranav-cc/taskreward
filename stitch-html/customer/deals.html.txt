@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Categorized Deals - Rewards Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "teal-dark": "#134e4a",
+                        "indigo-custom": "#1e1b4b",
+                        "mint-bg": "#f0fdfa",
+                        "mint-overlay": "#ccfbf1",
+                        "accent-yellow": "#facc15",
+                        "whatsapp": "#25D366",
+                        "urgent-red": "#fef2f2",
+                        "urgent-text": "#991b1b",
+                        "verified-green": "#22c55e"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute top-0 left-0 w-full h-[320px] bg-mint-overlay rounded-b-[4rem] z-0 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-around opacity-[0.03] pointer-events-none select-none text-teal-dark">
+<span class="material-symbols-outlined text-[240px]">shopping_bag</span>
+<span class="material-symbols-outlined text-[180px]">redeem</span>
+<span class="material-symbols-outlined text-[200px]">card_giftcard</span>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<header class="flex items-center justify-between px-6 md:px-20 py-6 bg-transparent">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-indigo-custom rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">stars</span>
+</div>
+<h2 class="text-indigo-custom text-xl font-extrabold tracking-tight">TaskRewards</h2>
+</div>
+<div class="flex items-center gap-8">
+<button class="flex items-center justify-center rounded-full h-11 px-6 bg-white shadow-sm text-indigo-custom font-bold text-sm border border-teal-dark/5 hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-[22px] mr-2 text-primary">payments</span>
+                    ₹1,240
+                </button>
+<div class="size-11 rounded-full bg-white overflow-hidden border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcJy-cwmvVYUpE4UEX3gQgxUzjwY7QTF7h0w8vjZW8CnvCjO_P6yOLDPuBAw8S6jxm79iz8R2bsndyhrVmeGkf1PEf0cqfLGNT4OvmHlI22tBkBAU9Uee8GzP3RjfdD3YEDc-LNlWqqpWEaTcZUaHGkZQfClLWNpPlGkicy8IqVlZxo_Lvm7B15xvh1gxsMhoPoBedN3BK9QYZNHM8pyr3EHdJ1y2vs-DByw7o_fIAC4l48GnCE5q4UFHKmzWOiPxozKCh0ORrcVbR"/>
+</div>
+</div>
+</header>
+<nav class="px-6 md:px-20 mb-8 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-8 min-w-max border-b border-indigo-custom/10 pb-4">
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-indigo-custom font-bold text-sm border-b-2 border-primary pb-4 -mb-4" href="#">Deals</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Points</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Tasks</a>
+<a class="text-indigo-custom/60 font-bold text-sm hover:text-primary transition-colors" href="#">Refer a Friend</a>
+</div>
+</nav>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-4 md:px-10 py-4 pb-32">
+<div class="mb-10 flex flex-col gap-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-indigo-custom tracking-tight mb-2">Expiring Soon</h1>
+<div class="flex items-center gap-2 text-teal-dark font-semibold">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<p class="text-lg">Showing deals near <span class="text-primary underline decoration-2 underline-offset-4">560001</span></p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-white rounded-full border border-indigo-custom/10 text-sm font-bold flex items-center gap-2 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                            Filters
+                        </button>
+<button class="px-6 py-2.5 bg-white rounded-full border border-indigo-custom/10 text-sm font-bold flex items-center gap-2 text-primary transition-colors">
+<span class="material-symbols-outlined text-lg fill-1">favorite</span>
+                            Favorites
+                        </button>
+</div>
+</div>
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="px-8 py-3.5 bg-indigo-custom text-white rounded-2xl font-bold text-sm shadow-lg shadow-indigo-900/10 whitespace-nowrap">All</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Salon</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Grocery</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Wellness</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Food</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Fruits</button>
+<button class="px-8 py-3.5 bg-white text-indigo-custom border border-indigo-custom/5 rounded-2xl font-bold text-sm hover:bg-slate-50 shadow-sm transition-all whitespace-nowrap">Restaurants</button>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+<button class="px-4 py-1.5 bg-teal-dark text-white rounded-full text-xs font-bold transition-all whitespace-nowrap">All Status</button>
+<button class="px-4 py-1.5 bg-white text-teal-dark border border-teal-dark/10 rounded-full text-xs font-bold hover:bg-teal-50 transition-all whitespace-nowrap">New</button>
+<button class="px-4 py-1.5 bg-white text-teal-dark border border-teal-dark/10 rounded-full text-xs font-bold hover:bg-teal-50 transition-all whitespace-nowrap">Claimed</button>
+<button class="px-4 py-1.5 bg-white text-teal-dark border border-teal-dark/10 rounded-full text-xs font-bold hover:bg-teal-50 transition-all whitespace-nowrap">Expired</button>
+<button class="px-4 py-1.5 bg-white text-primary border border-primary/10 rounded-full text-xs font-bold hover:bg-rose-50 transition-all whitespace-nowrap">Near Expiry</button>
+<button class="px-4 py-1.5 bg-white text-teal-dark border border-teal-dark/10 rounded-full text-xs font-bold hover:bg-teal-50 transition-all flex items-center gap-1.5 whitespace-nowrap">
+<span class="material-symbols-outlined text-[14px] fill-1">favorite</span> Favorites
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-indigo-custom/5 border border-indigo-custom/5 relative flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxmoMlgga8konjhcgQzwuMm8nmnFpg6gfoE7K9hbKPPhMvKhCTzw8DXgqChFKs-mdiNh5E9Je3yJdDUPC5YniYQqvanV7o06wZNEy87bVr-SV65PiYyHj1t9QnONDPwkTQ9dsFnudP_i1OcE_Y_e6qGtfy260BOu-RJT-M5f2wiXTSpa8Dl8m-U6IUIpfCRrlYHuCiHbLzKY5hkO9Py-XWteUu8f6LBnXysCxdu-GVUP7nSti_GeUMX1nD5WQeYq2vOT-L456qAMB"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-[2px]">
+<div class="bg-white/95 px-6 py-3 rounded-2xl shadow-xl flex items-center gap-4 border border-white/20">
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">02</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Hrs</p>
+</div>
+<div class="text-indigo-custom/20 font-bold text-xl">:</div>
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">45</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Min</p>
+</div>
+<div class="text-indigo-custom/20 font-bold text-xl">:</div>
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">12</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Sec</p>
+</div>
+</div>
+</div>
+<button class="absolute top-6 right-6 size-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined fill-1">favorite</span>
+</button>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="mb-4">
+<span class="px-3 py-1 bg-urgent-red text-urgent-text text-[10px] font-black uppercase rounded-full tracking-wider border border-primary/10">Limited Time Offer</span>
+</div>
+<h3 class="text-xl font-black text-indigo-custom mb-2">Premium Athletic Sneakers</h3>
+<p class="text-indigo-custom/50 font-medium text-sm mb-6">Exclusive cashback on footwear at Lifestyle Store, Brigade Road.</p>
+<div class="mt-auto flex items-end justify-between border-t border-indigo-custom/5 pt-6">
+<div>
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-1">Cashback Price</p>
+<div class="flex items-center gap-2">
+<span class="text-3xl font-black text-emerald-500">₹2,499</span>
+<span class="text-indigo-custom/30 text-lg font-bold line-through">₹4,999</span>
+</div>
+</div>
+<button class="bg-indigo-custom text-white px-6 py-3.5 rounded-2xl font-black text-sm hover:bg-teal-dark transition-all shadow-lg shadow-indigo-900/10 active:scale-95">Claim Deal</button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-indigo-custom/5 border border-indigo-custom/5 relative flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsIVbkxF6ltLt7-VdpnUbDpHVcJe1fo2wX5Sgsgq9lTup0pC7ycvkq10AGlWutva2ZoLXSZVK7ghYaC_qsoFYv8ytdyYgQRlHElio7OzTrbE5bsl_1yGae5m5LNKtmoWJB8ATj1ibx6lbmsMmxYOQEXH5gED9LjGK7bd-nml1SOhN37iAgVKlKQvkva48WB163BjyRx8KDTA6pLXkENsmttdE7jWeMdVCRZwVvLZ5UdDSRv1BCTKa5q7w1IJWKARLfFtNyVFza-sJI"/>
+<div class="absolute top-6 left-6 px-4 py-2 bg-accent-yellow text-yellow-950 text-[10px] font-black uppercase rounded-full shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+                            Popular
+                        </div>
+<button class="absolute top-6 right-6 size-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined fill-1">favorite</span>
+</button>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="mb-4">
+<span class="px-3 py-1 bg-teal-dark/5 text-teal-dark text-[10px] font-black uppercase rounded-full tracking-wider">Electronics</span>
+</div>
+<h3 class="text-xl font-black text-indigo-custom mb-2">Noise Cancelling Headphones</h3>
+<p class="text-indigo-custom/50 font-medium text-sm mb-6">Redeem points for flat 50% cashback on next-gen audio gear.</p>
+<div class="mt-auto flex items-end justify-between border-t border-indigo-custom/5 pt-6">
+<div>
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-1">Cashback Price</p>
+<div class="flex items-center gap-2">
+<span class="text-3xl font-black text-emerald-500">₹8,990</span>
+<span class="text-indigo-custom/30 text-lg font-bold line-through">₹17,990</span>
+</div>
+</div>
+<button class="bg-indigo-custom text-white px-6 py-3.5 rounded-2xl font-black text-sm hover:bg-teal-dark transition-all shadow-lg shadow-indigo-900/10 active:scale-95">Claim Deal</button>
+</div>
+</div>
+</div>
+<div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-indigo-custom/5 border border-indigo-custom/5 relative flex flex-col">
+<div class="relative h-64 overflow-hidden">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt7cQ0UQeJI8zyFXYo5cluTF1_Spl7-v3yybCvBHzG71KOMePZ4Uxw_NiwXpgI6PEgXqJ9YQGG7j_y69OwrHOajux9D6IxsS_lvQm_l2hRI95Zfp5AaHEC0EYxLmwyrtQ9qUUyIPbPXc29w44wei8Yt_1SfusYu-4KgRiOthkgdFj90mbgL8eyOB4bifWH7-Bi8TkLlYL20ASiNNCGD21LbsEvwjGUx_5AArjx2MnyPLr6CTrlUeUnqywnG6cA1W4gUw9jVD9ddnrM"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center backdrop-blur-[2px]">
+<div class="bg-white/95 px-6 py-3 rounded-2xl shadow-xl flex items-center gap-4 border border-white/20">
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">00</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Hrs</p>
+</div>
+<div class="text-indigo-custom/20 font-bold text-xl">:</div>
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">18</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Min</p>
+</div>
+<div class="text-indigo-custom/20 font-bold text-xl">:</div>
+<div class="text-center">
+<p class="text-xl font-black text-primary leading-none">54</p>
+<p class="text-[8px] font-bold text-indigo-custom/40 uppercase">Sec</p>
+</div>
+</div>
+</div>
+<button class="absolute top-6 right-6 size-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined fill-1">favorite</span>
+</button>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="mb-4">
+<span class="px-3 py-1 bg-urgent-red text-urgent-text text-[10px] font-black uppercase rounded-full tracking-wider border border-primary/10">Ends in minutes!</span>
+</div>
+<h3 class="text-xl font-black text-indigo-custom mb-2">Smart Home Bundle</h3>
+<p class="text-indigo-custom/50 font-medium text-sm mb-6">Home automation kit at unbeatable cashback rates. Final stock.</p>
+<div class="mt-auto flex items-end justify-between border-t border-indigo-custom/5 pt-6">
+<div>
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest mb-1">Cashback Price</p>
+<div class="flex items-center gap-2">
+<span class="text-3xl font-black text-emerald-500">₹4,200</span>
+<span class="text-indigo-custom/30 text-lg font-bold line-through">₹12,000</span>
+</div>
+</div>
+<button class="bg-primary text-white px-6 py-3.5 rounded-2xl font-black text-sm hover:bg-rose-600 transition-all shadow-lg shadow-rose-900/10 active:scale-95">Flash Claim</button>
+</div>
+</div>
+</div>
+</div>
+<section class="mt-20">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Recently Completed</h2>
+</div>
+<button class="text-primary text-xs font-black uppercase tracking-widest hover:underline">SEE ALL</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-100 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1 border border-verified-green/20">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                            </div>
+<p class="text-slate-500 font-black text-lg group-hover:text-verified-green transition-colors">+200 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">Visit Local Organic Farm</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed 2h ago</p>
+</div>
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-100 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1 border border-verified-green/20">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                            </div>
+<p class="text-slate-500 font-black text-lg group-hover:text-verified-green transition-colors">+1,500 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">Buy 1kg Raw Honey</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed yesterday</p>
+</div>
+<div class="min-w-[260px] md:min-w-[300px] bg-slate-100 p-6 rounded-[2.5rem] border border-slate-200 opacity-80 grayscale-[0.5] hover:grayscale-0 transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-verified-green/10 text-verified-green text-[10px] font-black uppercase rounded-full flex items-center gap-1 border border-verified-green/20">
+<span class="material-symbols-outlined text-[12px] font-black">verified</span> Verified
+                            </div>
+<p class="text-slate-500 font-black text-lg group-hover:text-verified-green transition-colors">+50 pts</p>
+</div>
+<h3 class="font-bold text-slate-700 text-base mb-1">Store Review: Daily Fresh</h3>
+<p class="text-slate-400 font-bold text-[10px] mb-2 uppercase tracking-tight">Completed 3 days ago</p>
+</div>
+</div>
+</section>
+<section class="mt-14 pb-10">
+<div class="bg-gradient-to-br from-whatsapp/10 to-whatsapp/20 border-2 border-whatsapp/20 rounded-[2.5rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-whatsapp/10">
+<div class="flex items-center gap-6">
+<div class="size-16 bg-whatsapp rounded-2xl flex items-center justify-center text-white shadow-lg">
+<svg class="w-10 h-10 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-xl font-black text-indigo-custom">Refer &amp; Earn Together</h3>
+<p class="text-indigo-custom/60 font-medium">Earn ₹200 for every friend who completes their first task.</p>
+</div>
+</div>
+<button class="w-full md:w-auto px-8 py-4 bg-whatsapp text-white font-black rounded-2xl hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-lg shadow-whatsapp/20">
+                        Share on WhatsApp
+                    </button>
+</div>
+</section>
+</main>
+<footer class="lg:hidden bg-white/90 backdrop-blur-xl border-t border-slate-100 fixed bottom-0 w-full px-8 py-4 z-50 flex justify-between items-center pb-safe">
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-black">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">assignment</span>
+<span class="text-[10px] font-black">Deals</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-10" href="#">
+<div class="bg-indigo-custom size-14 rounded-full flex items-center justify-center text-white shadow-2xl shadow-indigo-900/40 ring-4 ring-white">
+<span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+</div>
+<span class="text-[10px] font-black text-indigo-custom mt-2">Scan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-[10px] font-black">Points</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black">Profile</span>
+</a>
+</footer>
+</div>
+</div>
+
+</body></html>

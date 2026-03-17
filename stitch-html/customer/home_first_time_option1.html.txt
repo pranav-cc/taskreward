@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quick Start Rewards Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "teal-dark": "#134e4a",
+                        "indigo-custom": "#1e1b4b",
+                        "mint-bg": "#f0fdfa",
+                        "mint-overlay": "#ccfbf1",
+                        "accent-yellow": "#facc15",
+                        "whatsapp": "#25D366",
+                        "urgent-red": "#fef2f2",
+                        "urgent-text": "#991b1b",
+                        "verified-green": "#22c55e"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute top-0 left-0 w-full h-[320px] bg-mint-overlay rounded-b-[4rem] z-0 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-around opacity-[0.03] pointer-events-none select-none text-teal-dark">
+<span class="material-symbols-outlined text-[240px]">stars</span>
+<span class="material-symbols-outlined text-[180px]">redeem</span>
+<span class="material-symbols-outlined text-[200px]">bolt</span>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<header class="flex items-center justify-between px-6 md:px-20 py-6 bg-transparent">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-indigo-custom rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">stars</span>
+</div>
+<h2 class="text-indigo-custom text-xl font-extrabold tracking-tight">TaskRewards</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-11 px-6 bg-white shadow-sm text-indigo-custom font-bold text-sm border border-teal-dark/5">
+<span class="material-symbols-outlined text-[20px] mr-2 text-primary">account_balance_wallet</span>
+                        0 Points
+                    </button>
+<div class="size-11 rounded-full bg-white overflow-hidden border-2 border-white shadow-md cursor-pointer">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANGZFeS7qf-gAdT0kB5gE1ZoTOczleYOeIBosW6R0EuCwVLi36ri7u_5iRJRyZ6SKSLTEAzm7jLxPnu4bvOTyE4o1RR__v_8e7DfNpJMpfrRqy9S2QRfF3-qv1KnCd3xwRLrWIdlclCCo33o-tPBPiSpkfss_x449ns7G0j6GNbQXIT8dbukq9hAl2xmVNY-2X8Hby1nstL39JYk0MXo1R1xEHe_fgh504BcqYOUtqAbPBj4ZsVBuK2nLIp26tDYYizCyL322TLsIm"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-4 md:px-10 py-4 pb-32">
+<div class="mb-8">
+<h1 class="text-3xl md:text-5xl font-extrabold text-indigo-custom tracking-tight mb-2">Hello, Arjun!</h1>
+<p class="text-indigo-custom/70 font-semibold text-lg">Earn your first 100 points in 2 mins.</p>
+</div>
+<section class="mb-10">
+<div class="relative bg-gradient-to-br from-indigo-custom to-indigo-950 rounded-[2.5rem] p-8 md:p-12 overflow-hidden shadow-2xl shadow-indigo-900/30">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] translate-x-1/4 -translate-y-1/4">loyalty</span>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-10 relative z-10">
+<div class="flex-1 text-center md:text-left">
+<h2 class="text-3xl md:text-4xl font-black text-white leading-tight mb-4">Turn Tasks into <span class="text-accent-yellow">Big Discounts</span></h2>
+<p class="text-indigo-100/70 text-lg font-medium mb-8 max-w-md">Every point you earn brings you closer to free groceries, electronics, and lifestyle vouchers.</p>
+<button class="bg-primary hover:bg-rose-600 text-white px-8 py-4 rounded-2xl font-black text-lg shadow-xl shadow-primary/30 transition-all scale-100 hover:scale-105 active:scale-95">
+                                    Earn First 50 Points Now
+                                </button>
+</div>
+<div class="w-full md:w-auto flex justify-center">
+<div class="relative">
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/20 flex flex-col items-center gap-4">
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-full bg-accent-yellow flex items-center justify-center text-indigo-custom shadow-lg">
+<span class="material-symbols-outlined text-3xl font-bold">star</span>
+</div>
+<div class="text-white">
+<p class="text-[10px] font-black uppercase opacity-60">Your Balance</p>
+<p class="text-2xl font-black">50 Points</p>
+</div>
+</div>
+<div class="w-full h-px bg-white/10"></div>
+<div class="bg-emerald-500 text-white px-4 py-3 rounded-xl flex items-center gap-3 w-full">
+<span class="material-symbols-outlined text-xl">confirmation_number</span>
+<div>
+<p class="text-[9px] font-black uppercase leading-none mb-1 opacity-80">Reward Applied</p>
+<p class="text-sm font-bold">₹50 OFF GROCERIES</p>
+</div>
+</div>
+</div>
+<div class="absolute -top-4 -left-4 size-10 bg-primary/20 rounded-full blur-xl"></div>
+<div class="absolute -bottom-4 -right-4 size-14 bg-accent-yellow/20 rounded-full blur-xl"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-14">
+<div class="bg-white rounded-[2.5rem] p-1 shadow-xl border border-indigo-custom/5 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-9xl">card_giftcard</span>
+</div>
+<div class="bg-mint-bg/50 rounded-[2.3rem] p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-white">
+<div class="flex items-center gap-6">
+<div class="size-20 bg-accent-yellow rounded-3xl flex items-center justify-center text-indigo-custom shadow-lg shrink-0 rotate-3">
+<span class="material-symbols-outlined text-5xl">card_giftcard</span>
+</div>
+<div>
+<h3 class="text-2xl font-black text-indigo-custom">Your Welcome Gift: 50 Bonus Points</h3>
+<p class="text-indigo-custom/60 font-bold flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-teal-dark text-lg">info</span>
+                                        Unlock after completing your 1st task
+                                    </p>
+</div>
+</div>
+<div class="px-6 py-3 bg-indigo-custom text-white rounded-2xl font-black text-sm uppercase tracking-widest whitespace-nowrap">
+                                Locked
+                            </div>
+</div>
+</div>
+</section>
+<section class="mb-14">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined fill-1">bolt</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Quick Starts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-indigo-custom/5 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase rounded-full">Easy • 1 min</span>
+<p class="text-indigo-custom font-black text-xl">+10 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-4 flex-1">Complete your Profile</h3>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black shadow-lg shadow-indigo-900/10 hover:bg-teal-dark transition-colors">Start</button>
+</div>
+<div class="bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-indigo-custom/5 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase rounded-full">Fast • 2 min</span>
+<p class="text-indigo-custom font-black text-xl">+20 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-4 flex-1">Watch 15s Tutorial</h3>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black shadow-lg shadow-indigo-900/10 hover:bg-teal-dark transition-colors">Start</button>
+</div>
+<div class="bg-white p-6 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border-2 border-primary/20 flex flex-col relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[9px] font-black uppercase rounded-full shadow-md z-10 whitespace-nowrap">Recommended</div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase rounded-full">Locate • 3 min</span>
+<p class="text-indigo-custom font-black text-xl">+50 pts</p>
+</div>
+<h3 class="font-black text-indigo-custom text-lg mb-4 flex-1">Visit Nearest Shop</h3>
+<button class="w-full py-3.5 bg-indigo-custom text-white rounded-2xl text-sm font-black shadow-lg shadow-indigo-900/10 hover:bg-teal-dark transition-colors">Start</button>
+</div>
+</div>
+</section>
+<section class="mb-14">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-accent-yellow/20 flex items-center justify-center text-accent-yellow">
+<span class="material-symbols-outlined fill-1">lock</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">Rewards for You</h2>
+</div>
+<button class="text-primary text-xs font-black uppercase tracking-widest">See All</button>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[280px] md:min-w-[320px] bg-white rounded-[2.5rem] overflow-hidden border border-indigo-custom/5 relative group">
+<div class="h-40 bg-slate-100 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-6xl text-slate-300">potted_plant</span>
+<div class="absolute inset-0 bg-indigo-custom/80 backdrop-blur-sm flex flex-col items-center justify-center text-white opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-4xl mb-2">lock</span>
+<p class="font-black text-sm uppercase tracking-widest">Locked</p>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-black text-indigo-custom text-lg mb-2">Organic Raw Honey</h3>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-black uppercase text-indigo-custom/40">
+<span>Progress</span>
+<span>0/300 points</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[0%] h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[10px] text-primary font-bold">Earn 300 more points to unlock</p>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] bg-white rounded-[2.5rem] overflow-hidden border border-indigo-custom/5 relative">
+<div class="h-40 bg-slate-100 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-6xl text-slate-300">shopping_basket</span>
+<div class="absolute inset-0 bg-indigo-custom/80 backdrop-blur-sm flex flex-col items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl mb-2">lock</span>
+<p class="font-black text-sm uppercase tracking-widest">Locked</p>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-black text-indigo-custom text-lg mb-2">Monthly Grocery Kit</h3>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-black uppercase text-indigo-custom/40">
+<span>Progress</span>
+<span>0/1500 points</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[0%] h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[10px] text-primary font-bold">Earn 1,500 more points to unlock</p>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] md:min-w-[320px] bg-white rounded-[2.5rem] overflow-hidden border border-indigo-custom/5 relative">
+<div class="h-40 bg-slate-100 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-6xl text-slate-300">smartphone</span>
+<div class="absolute inset-0 bg-indigo-custom/80 backdrop-blur-sm flex flex-col items-center justify-center text-white">
+<span class="material-symbols-outlined text-4xl mb-2">lock</span>
+<p class="font-black text-sm uppercase tracking-widest">Locked</p>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-black text-indigo-custom text-lg mb-2">₹500 Amazon Voucher</h3>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-black uppercase text-indigo-custom/40">
+<span>Progress</span>
+<span>0/5000 points</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="w-[0%] h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[10px] text-primary font-bold">Earn 5,000 more points to unlock</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pb-10">
+<div class="bg-gradient-to-br from-whatsapp/5 to-whatsapp/15 border border-whatsapp/20 rounded-[2.5rem] p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="size-12 bg-whatsapp rounded-xl flex items-center justify-center text-white shadow-lg shrink-0">
+<svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-lg font-black text-indigo-custom">Refer &amp; Earn Faster</h3>
+<p class="text-indigo-custom/60 text-sm font-medium">Invite friends and get 100 bonus points instantly.</p>
+</div>
+</div>
+<button class="bg-whatsapp text-white px-6 py-3 rounded-2xl font-black text-sm hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                            Share Now
+                        </button>
+</div>
+</section>
+</main>
+<footer class="lg:hidden bg-white/90 backdrop-blur-xl border-t border-slate-100 fixed bottom-0 w-full px-8 py-4 z-50 flex justify-between items-center pb-safe">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-black">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-black">Tasks</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-10" href="#">
+<div class="bg-indigo-custom size-14 rounded-full flex items-center justify-center text-white shadow-2xl shadow-indigo-900/40 ring-4 ring-white">
+<span class="material-symbols-outlined text-3xl">qr_code_scanner</span>
+</div>
+<span class="text-[10px] font-black text-indigo-custom mt-2">Scan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">redeem</span>
+<span class="text-[10px] font-black">Rewards</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-black">Profile</span>
+</a>
+</footer>
+</div>
+</div>
+
+</body></html>

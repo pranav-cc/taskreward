@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Merchant Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "navy-900": "#0f172a",
+                        "navy-800": "#1e293b",
+                        "slate-100": "#f1f5f9",
+                        "primary-blue": "#2563eb",
+                        "emerald-500": "#10b981",
+                    },
+                    fontFamily: {
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "2xl": "1rem",
+                        "3xl": "1.5rem"
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-navy-900 min-h-screen flex">
+<aside class="w-64 bg-navy-900 text-white min-h-screen flex flex-col fixed left-0 top-0 hidden lg:flex">
+<div class="p-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary-blue rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">insights</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">MerchantHub</h2>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 bg-white/10 rounded-xl text-white font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span>
+                Campaigns
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">local_offer</span>
+                Deals
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+                Customers
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                Store Profile
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Payouts
+            </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-navy-800 rounded-2xl p-4 border border-white/5">
+<p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Support Plan</p>
+<p class="text-sm font-bold text-white mb-3">Premium Partner</p>
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-blue h-full w-4/5"></div>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 lg:ml-64 p-4 md:p-8">
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h1 class="text-2xl font-extrabold text-navy-900">Business Growth Dashboard</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
+<span class="text-slate-500 font-semibold text-sm">Arjun's Premium Kirana &amp; General Store</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-white p-1 rounded-2xl border border-slate-200">
+<button class="size-10 flex items-center justify-center text-slate-400 hover:text-navy-900">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="size-10 flex items-center justify-center text-slate-400 hover:text-navy-900">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-px h-6 bg-slate-200 mx-1"></div>
+<div class="flex items-center gap-3 pl-2 pr-4 cursor-pointer hover:bg-slate-50 transition-colors rounded-xl py-1">
+<div class="size-8 rounded-lg bg-slate-100 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAe7JkHPencVE8Tw0w1-U7k5uER-XNFWlBVwYsd05Rmd3kiZdfzeRXc5KzyPFybmSBi9Jn5e9TpkgVUZ95ix49Zwi9-00iPXVgcE2--8-17DeBtR6KhMpWd2uh0VOzhxQ8OxwLG4gLHd9VD5lIwzv8DXORH9V2MwLQ2FM-jNldsgAtPeg1k1jeePOGONlsQFiNCwnInwaHWGYj1sWZ24o-UTmmM510LKqTxNyA9dqzHAL9j8ta8u4NMCjbwadtT2pfo5-szvXE9BZO"/>
+</div>
+<span class="text-sm font-bold text-navy-900">Arjun Singh</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-wrap items-center gap-4 mb-8">
+<button class="bg-navy-900 text-white px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 hover:bg-navy-800 transition-all shadow-lg shadow-navy-900/10">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                Create Campaign
+            </button>
+<button class="bg-white text-navy-900 border border-slate-200 px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-lg">confirmation_number</span>
+                Add Deal
+            </button>
+<button class="bg-white text-navy-900 border border-slate-200 px-6 py-3 rounded-2xl font-bold text-sm flex items-center gap-2 hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-lg">add_business</span>
+                Add Outlet
+            </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Revenue Generated</p>
+<p class="text-2xl font-extrabold text-navy-900">₹42,850</p>
+<p class="text-[10px] text-emerald-500 font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +12.5% this month
+                </p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Total Orders</p>
+<p class="text-2xl font-extrabold text-navy-900">1,284</p>
+<p class="text-[10px] text-emerald-500 font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +8.2% vs prev. month
+                </p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Repeat Customer %</p>
+<p class="text-2xl font-extrabold text-navy-900">32.4%</p>
+<p class="text-[10px] text-primary-blue font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">info</span> Healthy retention
+                </p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Avg Order Value</p>
+<p class="text-2xl font-extrabold text-navy-900">₹842</p>
+<p class="text-[10px] text-slate-400 font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">remove</span> Stable performance
+                </p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+<p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Active Campaigns</p>
+<p class="text-2xl font-extrabold text-primary-blue">08</p>
+<p class="text-[10px] text-slate-400 font-bold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">bolt</span> 2 ending soon
+                </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<div class="lg:col-span-2 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="text-lg font-extrabold text-navy-900">Sales Performance</h3>
+<p class="text-sm text-slate-500 font-medium">Monthly revenue trend overview</p>
+</div>
+<select class="bg-slate-50 border-slate-200 rounded-xl text-sm font-bold text-navy-900 py-2 px-4 focus:ring-primary-blue">
+<option>Last 6 Months</option>
+<option>Last 30 Days</option>
+<option>Current Year</option>
+</select>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 pt-4 border-b border-slate-100">
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-slate-100 rounded-t-xl h-24 group-hover:bg-primary-blue/20 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">MAY</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-slate-100 rounded-t-xl h-40 group-hover:bg-primary-blue/20 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">JUN</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-slate-100 rounded-t-xl h-32 group-hover:bg-primary-blue/20 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">JUL</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-primary-blue rounded-t-xl h-56 transition-all"></div>
+<span class="text-[10px] font-bold text-navy-900">AUG</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-slate-100 rounded-t-xl h-36 group-hover:bg-primary-blue/20 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">SEP</span>
+</div>
+<div class="w-full flex flex-col items-center gap-4 group">
+<div class="w-full bg-slate-100 rounded-t-xl h-44 group-hover:bg-primary-blue/20 transition-all"></div>
+<span class="text-[10px] font-bold text-slate-400">OCT</span>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col">
+<h3 class="text-lg font-extrabold text-navy-900 mb-6">Recent Customers</h3>
+<div class="space-y-6 flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-sm">RK</div>
+<div>
+<p class="text-sm font-bold text-navy-900">Rahul K.</p>
+<p class="text-xs text-slate-400">Ordered 15m ago</p>
+</div>
+</div>
+<span class="text-sm font-black text-navy-900">₹1,240</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-sm">SP</div>
+<div>
+<p class="text-sm font-bold text-navy-900">Sneha P.</p>
+<p class="text-xs text-slate-400">Ordered 1h ago</p>
+</div>
+</div>
+<span class="text-sm font-black text-navy-900">₹450</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-sm">AV</div>
+<div>
+<p class="text-sm font-bold text-navy-900">Amit V.</p>
+<p class="text-xs text-slate-400">Ordered 2h ago</p>
+</div>
+</div>
+<span class="text-sm font-black text-navy-900">₹3,100</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-slate-200 text-navy-900 text-xs font-black uppercase tracking-widest rounded-2xl hover:bg-slate-50 transition-all">
+                    View All Customers
+                </button>
+</div>
+</div>
+<section class="mb-8">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<h2 class="text-xl font-extrabold text-navy-900">Recently Completed</h2>
+</div>
+<button class="text-primary-blue text-xs font-black uppercase tracking-widest hover:underline">SEE ALL</button>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+<div class="min-w-[280px] bg-white p-5 rounded-2xl border border-slate-200 opacity-80 hover:opacity-100 transition-all flex flex-col grayscale-[0.6] hover:grayscale-0">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                        </div>
+<p class="text-emerald-600 font-black text-lg">+200 pts</p>
+</div>
+<h3 class="font-bold text-navy-900 text-base mb-1">Weekly Bulk Delivery</h3>
+<p class="text-slate-400 font-bold text-[10px] uppercase">Completed 2h ago</p>
+</div>
+<div class="min-w-[280px] bg-white p-5 rounded-2xl border border-slate-200 opacity-80 hover:opacity-100 transition-all flex flex-col grayscale-[0.6] hover:grayscale-0">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                        </div>
+<p class="text-emerald-600 font-black text-lg">+1,500 pts</p>
+</div>
+<h3 class="font-bold text-navy-900 text-base mb-1">Festive Discount Campaign</h3>
+<p class="text-slate-400 font-bold text-[10px] uppercase">Completed yesterday</p>
+</div>
+<div class="min-w-[280px] bg-white p-5 rounded-2xl border border-slate-200 opacity-80 hover:opacity-100 transition-all flex flex-col grayscale-[0.6] hover:grayscale-0">
+<div class="flex justify-between items-start mb-4">
+<div class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                        </div>
+<p class="text-emerald-600 font-black text-lg">+100 pts</p>
+</div>
+<h3 class="font-bold text-navy-900 text-base mb-1">Outlet Verification</h3>
+<p class="text-slate-400 font-bold text-[10px] uppercase">Completed 2 days ago</p>
+</div>
+</div>
+</section>
+</main>
+
+</body></html>

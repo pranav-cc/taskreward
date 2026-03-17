@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visual Deal Breakdown Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "teal-dark": "#134e4a",
+                        "indigo-custom": "#1e1b4b",
+                        "mint-bg": "#f8fafc",
+                        "mint-overlay": "#f1f5f9",
+                        "accent-yellow": "#facc15",
+                        "whatsapp": "#25D366",
+                        "verified-green": "#22c55e",
+                        "price-bg": "#e2e8f0"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .progress-gradient {
+                background: linear-gradient(90deg, #e11d48 0%, #22c55e 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex flex-col min-h-screen w-full">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-indigo-custom/5 px-6 md:px-20 py-4">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-slate-100 rounded-full transition-colors lg:hidden" onclick="history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="size-10 bg-indigo-custom rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">stars</span>
+</div>
+<h2 class="text-indigo-custom text-xl font-extrabold tracking-tight hidden sm:block">TaskRewards</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end mr-2">
+<span class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/40 leading-none mb-1">Your Balance</span>
+<p class="text-indigo-custom font-bold text-sm">2,450 pts</p>
+</div>
+<div class="size-10 rounded-full bg-white overflow-hidden border-2 border-white shadow-md cursor-pointer hover:scale-105 transition-transform">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Ij8CTGO1QIfqZFKtP6kx016OXT7Vcw7FTVFFY4PYnAU6KqgnaLgIeXCVpLAEAixQP6hOGUMAE079h-pSba36YRJgV04nhW3jXPBx6B6NRWDZHSCIvciWQvf42ati45W_71B70ld-hHp0W584s05hf15jpoytI8TTqJ9zN_vf75sO5pYHZbhZTrldUdo-kO4eqQ6hBKo8nRlzfdttENh0HXC4OrXZj7ybfwzLPARR-_sUGMPYyrB5uyNnenpFY0ZEkXxkWEp5k2Uc"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-4 md:px-10 py-8 lg:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-7 space-y-8">
+<div class="relative group rounded-3xl overflow-hidden bg-white shadow-2xl shadow-indigo-custom/5 border border-indigo-custom/5 aspect-[4/3] lg:aspect-auto lg:h-[500px]">
+<img alt="Product Hero" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxOBcB7WQ-rgMVinczy87Fc6nJImi6hGabBgLqSlg_VI27r0MGt2ifvykKWmksZNZNH1cUc2gH5HWQGOKFP8cwBJR6vE32-4ZMUh-uJQVlMUUDo8FlwYEivZIU2whA-mCTn-cW-G7FxoDogRcLSwwSUVCDbFa-87JL27HUUAZ2bPhNTUH5Vr5N8upMv6KLdPNCWLoBplgqNnE8JH4YHNkcbdhFvGxe_8GUw0gSasX7ccl62L--hDWZGo80KusDh8Dp5Yx2WuRX1_hu"/>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-indigo-custom/90 backdrop-blur-md p-6 rounded-2xl border border-white/10 flex items-center justify-between">
+<div>
+<p class="text-white/60 text-[10px] font-black uppercase tracking-widest mb-1">Offer Ends In</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-white text-2xl font-black tabular-nums">08</span>
+<span class="text-white/40 text-[9px] font-bold uppercase">Hrs</span>
+</div>
+<span class="text-white/40 font-black text-2xl">:</span>
+<div class="flex flex-col">
+<span class="text-white text-2xl font-black tabular-nums">42</span>
+<span class="text-white/40 text-[9px] font-bold uppercase">Min</span>
+</div>
+<span class="text-white/40 font-black text-2xl">:</span>
+<div class="flex flex-col">
+<span class="text-white text-2xl font-black tabular-nums">15</span>
+<span class="text-white/40 text-[9px] font-bold uppercase">Sec</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="px-4 py-2 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-black uppercase tracking-widest">
+                                        Limited Stock
+                                    </span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-3xl border border-indigo-custom/5 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-3 py-1 bg-teal-dark/10 text-teal-dark text-[10px] font-black uppercase rounded-full">Premium Brand</span>
+<div class="flex items-center gap-1 text-accent-yellow">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="text-indigo-custom font-bold text-xs">4.8 (1.2k Reviews)</span>
+</div>
+</div>
+<h1 class="text-3xl font-black text-indigo-custom mb-4 leading-tight">Pro Studio Wireless Noise Cancelling Headphones</h1>
+<p class="text-slate-500 font-medium leading-relaxed mb-6">
+                            Experience studio-quality sound anywhere. These headphones feature adaptive noise cancellation, 40-hour battery life, and rapid charging. Redeem your hard-earned points to get this at an unbeatable price.
+                        </p>
+<div class="grid grid-cols-3 gap-4 border-t border-indigo-custom/5 pt-6">
+<div class="flex flex-col">
+<span class="material-symbols-outlined text-indigo-custom/40 mb-2">local_shipping</span>
+<span class="text-[11px] font-black uppercase text-indigo-custom/40 tracking-wider">Delivery</span>
+<span class="text-sm font-bold">2-3 Days</span>
+</div>
+<div class="flex flex-col">
+<span class="material-symbols-outlined text-indigo-custom/40 mb-2">verified_user</span>
+<span class="text-[11px] font-black uppercase text-indigo-custom/40 tracking-wider">Warranty</span>
+<span class="text-sm font-bold">1 Year</span>
+</div>
+<div class="flex flex-col">
+<span class="material-symbols-outlined text-indigo-custom/40 mb-2">cached</span>
+<span class="text-[11px] font-black uppercase text-indigo-custom/40 tracking-wider">Returns</span>
+<span class="text-sm font-bold">7 Days</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-white p-8 rounded-[2.5rem] shadow-xl shadow-indigo-custom/5 border border-indigo-custom/5 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<div class="size-12 bg-verified-green/10 rounded-2xl flex items-center justify-center text-verified-green">
+<span class="material-symbols-outlined text-2xl font-black">savings</span>
+</div>
+</div>
+<h3 class="text-xl font-black text-indigo-custom mb-6">Price Progress</h3>
+<div class="space-y-8 mb-8">
+<div class="relative pt-6">
+<div class="flex justify-between text-[11px] font-black uppercase tracking-widest text-indigo-custom/40 mb-4">
+<span>Market Price</span>
+<span class="text-verified-green">Your Price</span>
+</div>
+<div class="h-4 w-full bg-slate-100 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary/20 w-1/3 border-r-2 border-white"></div>
+<div class="h-full bg-primary/40 w-1/4 border-r-2 border-white"></div>
+<div class="h-full bg-verified-green w-1/6"></div>
+</div>
+<div class="flex justify-between items-start mt-4">
+<div class="text-center">
+<p class="text-slate-400 font-bold line-through text-lg leading-none">₹14,999</p>
+<p class="text-[10px] font-bold text-slate-400 mt-1 uppercase">Retail</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-verified-green leading-none">₹8,499</p>
+<p class="text-[10px] font-black text-verified-green mt-1 uppercase">With 2,000 Points</p>
+</div>
+</div>
+</div>
+<div class="bg-indigo-custom/5 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">stars</span>
+<div>
+<p class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/60">Points Applied</p>
+<p class="text-sm font-bold">2,000 Points Used</p>
+</div>
+</div>
+<button class="text-primary text-[10px] font-black uppercase hover:underline">Edit</button>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full py-5 bg-indigo-custom text-white rounded-2xl text-base font-black shadow-lg shadow-indigo-900/20 hover:bg-teal-dark transition-all flex items-center justify-center gap-2 group">
+                                Claim Deal Now
+                                <span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+<button class="w-full py-4 border-2 border-whatsapp/20 text-whatsapp rounded-2xl text-sm font-black flex items-center justify-center gap-3 hover:bg-whatsapp hover:text-white transition-all">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+                                Share Deal
+                            </button>
+</div>
+</div>
+<div class="bg-primary/5 rounded-[2.5rem] p-8 border border-primary/10 relative group cursor-pointer hover:bg-primary/10 transition-all">
+<div class="flex items-start gap-5">
+<div class="size-14 bg-white rounded-2xl flex items-center justify-center shadow-md shrink-0 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-primary">groups</span>
+</div>
+<div>
+<h4 class="text-lg font-black text-indigo-custom leading-tight mb-2">Social Proof</h4>
+<p class="text-sm text-indigo-custom/60 font-medium">
+                                    People who redeemed this also completed <span class="text-primary font-bold">"Review Headphones &amp; Share"</span> to earn <span class="text-primary font-bold">+500 pts</span> back.
+                                </p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between text-xs font-black uppercase tracking-widest text-primary">
+<span>View Linked Task</span>
+<span class="material-symbols-outlined text-base">open_in_new</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/40 mb-2">Claimed Today</p>
+<p class="text-2xl font-black">142</p>
+<div class="flex items-center gap-1 mt-1">
+<div class="flex -space-x-2">
+<div class="size-5 rounded-full bg-slate-200 border border-white"></div>
+<div class="size-5 rounded-full bg-slate-300 border border-white"></div>
+<div class="size-5 rounded-full bg-slate-400 border border-white"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400 ml-1">People nearby</span>
+</div>
+</div>
+<div class="bg-white p-5 rounded-3xl border border-indigo-custom/5">
+<p class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/40 mb-2">Point Bonus</p>
+<p class="text-2xl font-black text-primary">2.5x</p>
+<p class="text-[10px] text-slate-400 font-bold mt-1">On next purchase</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-xl border-t border-indigo-custom/5 z-[60] flex items-center gap-3">
+<button class="flex-1 py-4 bg-indigo-custom text-white rounded-2xl font-black shadow-lg">Claim Deal</button>
+<button class="p-4 bg-whatsapp/10 text-whatsapp rounded-2xl border border-whatsapp/20">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</button>
+</div>
+</div>
+
+</body></html>
