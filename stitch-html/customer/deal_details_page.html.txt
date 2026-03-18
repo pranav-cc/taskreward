@@ -1,0 +1,305 @@
+
+--- FILE: deal details page .html --- 
+
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deal Details - Fruits &amp; Vegetables</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e11d48",
+                        "teal-dark": "#134e4a",
+                        "indigo-custom": "#1e1b4b",
+                        "mint-bg": "#f0fdfa",
+                        "mint-overlay": "#ccfbf1",
+                        "accent-yellow": "#facc15",
+                        "whatsapp": "#25D366",
+                        "urgent-red": "#fef2f2",
+                        "urgent-text": "#991b1b",
+                        "verified-green": "#22c55e"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        "lg": "1.25rem",
+                        "xl": "2rem",
+                        "2xl": "2.5rem",
+                        "3xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-mint-bg font-display text-indigo-custom min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Background Decor from SCREEN_5 -->
+<div class="absolute top-0 left-0 w-full h-[320px] bg-mint-overlay rounded-b-[4rem] z-0 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-around opacity-[0.03] pointer-events-none select-none text-teal-dark">
+<span class="material-symbols-outlined text-[240px]">nutrition</span>
+<span class="material-symbols-outlined text-[180px]">savings</span>
+<span class="material-symbols-outlined text-[200px]">local_mall</span>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<!-- Header from SCREEN_5 -->
+<header class="flex items-center justify-between px-6 md:px-20 py-6 bg-transparent">
+<div class="flex items-center gap-3">
+<button class="size-10 bg-white rounded-xl flex items-center justify-center text-indigo-custom shadow-sm border border-teal-dark/5" onclick="history.back()">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-indigo-custom text-xl font-extrabold tracking-tight">Deal Details</h2>
+</div>
+<div class="flex items-center gap-8">
+<button class="flex items-center justify-center rounded-full h-11 px-6 bg-white shadow-sm text-indigo-custom font-bold text-sm border border-teal-dark/5">
+<span class="material-symbols-outlined text-[22px] mr-2 text-primary">payments</span>
+                        ₹1,240
+                    </button>
+</div>
+</header>
+<main class="flex-1 max-w-[1000px] mx-auto w-full px-4 md:px-10 py-4 pb-40">
+<!-- Hero Section: Merging Imagery and Title -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
+<div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] lg:aspect-auto h-full">
+<img alt="Fresh Fruits" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5C0bdFncvCYicRJ7I6wVzTrLRL9D1gYtKyNxSxkSI1dfr8YbmFreAixgl0Dty0NYrrcQ3rMAEV9pU20wks3s_iwQGG0RR9CeGgOBmfHu2X9TGAJtIY0kOU9X6rbKz8Mtq5PCvZwxWb2f5_lzkRixqZ3ME_Ptbz69JxyXuLWXBPJERcTdOVhg8g8hAsFb9hb8WtG1Zi6iO5CdflTJWMz81Y_qCuNVLrpp0OtGDB21udPNb8f-YMVK3qhWm_aLWjKh05hLWMILt0Ur7"/>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="bg-indigo-custom/80 backdrop-blur-md p-4 rounded-2xl border border-white/10 flex items-center justify-between">
+<div>
+<p class="text-white/60 text-[9px] font-black uppercase tracking-widest mb-1">Offer Ends In</p>
+<div class="flex gap-2">
+<span class="text-white text-lg font-black tabular-nums">08:42:15</span>
+</div>
+</div>
+<span class="px-3 py-1 bg-primary text-white rounded-full text-[9px] font-black uppercase tracking-widest">Limited Stock</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="inline-block w-fit px-4 py-1.5 bg-teal-dark text-white text-[11px] font-black uppercase tracking-widest rounded-full mb-6">
+                            Fruits &amp; Vegetables
+                        </span>
+<h1 class="text-3xl md:text-5xl font-extrabold text-indigo-custom tracking-tight leading-tight mb-8">
+                            Get 40% Off on Fruits Using <span class="text-primary">Cashback Points</span>
+</h1>
+<!-- Price Progress Bar with Add to Cart Button -->
+<div class="bg-white p-6 rounded-3xl border border-indigo-custom/5 shadow-sm">
+<div class="flex justify-between text-[11px] font-black uppercase tracking-widest text-indigo-custom/40 mb-3">
+<span>Market Price</span>
+<span class="text-verified-green">Your Price</span>
+</div>
+<div class="h-3 w-full bg-slate-100 rounded-full overflow-hidden flex mb-4">
+<div class="h-full bg-primary/20 w-1/3 border-r border-white"></div>
+<div class="h-full bg-primary/40 w-1/4 border-r border-white"></div>
+<div class="h-full bg-verified-green w-1/6"></div>
+</div>
+<div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-slate-400 font-bold line-through text-base">₹250</p>
+<p class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">Retail Price</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-black text-verified-green">₹150</p>
+<p class="text-[9px] font-black text-verified-green uppercase tracking-tighter">With 100 Points</p>
+</div>
+</div>
+<!-- Strategic CTA Placement -->
+<button class="w-full h-14 bg-indigo-custom text-white rounded-2xl font-black text-lg shadow-xl shadow-indigo-900/20 hover:bg-teal-dark transition-all flex items-center justify-center gap-3 group">
+                                Add to Cart
+                                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">shopping_cart</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Consolidated Stats Row - Re-laid out to Vertical Stacking -->
+<section class="mb-12">
+<div class="bg-white rounded-3xl border border-indigo-custom/5 shadow-sm p-6 flex flex-row items-center justify-between">
+<!-- Min. Cart Segment -->
+<div class="flex flex-1 items-center gap-4 px-2">
+<div class="size-10 rounded-xl bg-teal-dark/5 flex items-center justify-center text-teal-dark shrink-0">
+<span class="material-symbols-outlined text-[22px]">shopping_basket</span>
+</div>
+<div class="flex flex-col">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest leading-none mb-1.5">Min. Cart</p>
+<p class="text-lg font-black text-indigo-custom">₹100</p>
+</div>
+</div>
+<!-- Vertical Divider -->
+<div class="h-10 w-px bg-slate-100"></div>
+<!-- Max. Discount Segment -->
+<div class="flex flex-1 items-center gap-4 px-6">
+<div class="size-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">percentage</span>
+</div>
+<div class="flex flex-col">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest leading-none mb-1.5">Max. Discount</p>
+<p class="text-lg font-black text-primary">40%</p>
+</div>
+</div>
+<!-- Vertical Divider -->
+<div class="h-10 w-px bg-slate-100"></div>
+<!-- Validity Segment -->
+<div class="flex flex-1 items-center gap-4 px-2 justify-end md:justify-start">
+<div class="size-10 rounded-xl bg-indigo-custom/5 flex items-center justify-center text-indigo-custom shrink-0">
+<span class="material-symbols-outlined text-[22px]">event_available</span>
+</div>
+<div class="flex flex-col">
+<p class="text-indigo-custom/40 text-[10px] font-black uppercase tracking-widest leading-none mb-1.5">Validity</p>
+<p class="text-lg font-black text-indigo-custom">7 Days</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How This Works from SCREEN_5 -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-10 rounded-full bg-indigo-custom/10 flex items-center justify-center text-indigo-custom">
+<span class="material-symbols-outlined fill-1">calculate</span>
+</div>
+<h2 class="text-2xl font-black text-indigo-custom">How This Works</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-white rounded-[2.5rem] p-8 border-2 border-emerald-500/20 shadow-xl shadow-emerald-500/5 relative overflow-hidden">
+<div class="absolute top-0 right-0 px-6 py-2 bg-emerald-500 text-white text-[10px] font-black uppercase rounded-bl-3xl">
+                                Ideal Scenario
+                            </div>
+<h3 class="font-black text-indigo-custom text-lg mb-6">Full 40% Savings</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm font-bold text-slate-500">
+<span>Fruit Basket Price</span>
+<span>₹150</span>
+</div>
+<div class="flex justify-between items-center text-sm font-bold text-emerald-600">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">stars</span> Points Used (60)</span>
+<span>- ₹60</span>
+</div>
+<div class="pt-4 border-t border-dashed border-slate-200 flex justify-between items-center">
+<p class="font-black text-indigo-custom uppercase tracking-tighter text-xs">Final Price</p>
+<p class="text-3xl font-black text-indigo-custom">₹90</p>
+</div>
+</div>
+<div class="mt-6 bg-emerald-50 rounded-2xl p-3 border border-emerald-100">
+<p class="text-[11px] text-emerald-700 font-bold leading-relaxed">
+<span class="material-symbols-outlined text-[14px] align-middle mr-1">check_circle</span>
+                                    Maximized your points! You save the full 40% allowed.
+                                </p>
+</div>
+</div>
+<div class="bg-white rounded-[2.5rem] p-8 border border-indigo-custom/5 shadow-lg relative opacity-90">
+<h3 class="font-black text-indigo-custom text-lg mb-6">Low Points Scenario</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm font-bold text-slate-500">
+<span>Fruit Basket Price</span>
+<span>₹500</span>
+</div>
+<div class="flex justify-between items-center text-sm font-bold text-primary">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">stars</span> Points Used (40)</span>
+<span>- ₹40</span>
+</div>
+<div class="pt-4 border-t border-dashed border-slate-200 flex justify-between items-center">
+<p class="font-black text-indigo-custom uppercase tracking-tighter text-xs">Final Price</p>
+<p class="text-3xl font-black text-indigo-custom">₹460</p>
+</div>
+</div>
+<div class="mt-6 bg-amber-50 rounded-2xl p-3 border border-amber-100">
+<p class="text-[11px] text-amber-700 font-bold leading-relaxed">
+<span class="material-symbols-outlined text-[14px] align-middle mr-1">lightbulb</span>
+                                    If you had more cashback, you could unlock the full 40% savings.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Social Proof from SCREEN_43 -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<div class="bg-primary/5 rounded-[2.5rem] p-8 border border-primary/10 relative group cursor-pointer hover:bg-primary/10 transition-all flex flex-col justify-between">
+<div class="flex items-start gap-5">
+<div class="size-14 bg-white rounded-2xl flex items-center justify-center shadow-md shrink-0">
+<span class="material-symbols-outlined text-3xl text-primary">groups</span>
+</div>
+<div>
+<h4 class="text-lg font-black text-indigo-custom leading-tight mb-2">Social Proof</h4>
+<p class="text-sm text-indigo-custom/60 font-medium leading-relaxed">
+                                    Redeemers also completed <span class="text-primary font-bold">"Healthy Meal Review"</span> to earn <span class="text-primary font-bold">+200 pts</span> back.
+                                </p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-primary">
+<span>View Linked Task</span>
+<span class="material-symbols-outlined text-base">open_in_new</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-6 rounded-3xl border border-indigo-custom/5 shadow-sm">
+<p class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/40 mb-2">Claimed Today</p>
+<p class="text-3xl font-black">2.4k+</p>
+<div class="flex items-center gap-1 mt-2">
+<div class="flex -space-x-2">
+<div class="size-6 rounded-full bg-slate-200 border-2 border-white"></div>
+<div class="size-6 rounded-full bg-slate-300 border-2 border-white"></div>
+<div class="size-6 rounded-full bg-slate-400 border-2 border-white"></div>
+</div>
+<span class="text-[9px] font-bold text-slate-400 ml-2">People saved</span>
+</div>
+</div>
+<div class="bg-white p-6 rounded-3xl border border-indigo-custom/5 shadow-sm">
+<p class="text-[10px] font-black uppercase tracking-widest text-indigo-custom/40 mb-2">Point Bonus</p>
+<p class="text-3xl font-black text-primary">1.5x</p>
+<p class="text-[10px] text-slate-400 font-bold mt-2">On next grocery trip</p>
+</div>
+</div>
+</section>
+<!-- Motivational Hook from SCREEN_5 -->
+<section class="mb-10">
+<div class="bg-gradient-to-r from-teal-dark to-indigo-custom rounded-[2.5rem] p-8 overflow-hidden shadow-xl shadow-teal-900/20 relative">
+<div class="absolute -right-8 -top-8 size-40 bg-white/5 rounded-full blur-3xl"></div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+<div class="flex-1">
+<h2 class="text-xl font-black text-white mb-2">Need more points?</h2>
+<p class="text-white/70 font-bold text-sm">Earn 200-300 additional points by completing 5 live tasks today.</p>
+</div>
+<button class="bg-accent-yellow text-yellow-950 px-8 py-4 rounded-2xl font-black text-sm shadow-xl shadow-yellow-500/20 hover:scale-105 transition-transform flex items-center gap-2">
+                                Go to Tasks
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="bg-white/95 backdrop-blur-xl border-t border-slate-100 fixed bottom-0 w-full px-6 md:px-20 py-6 z-50">
+<div class="max-w-[1000px] mx-auto flex items-center gap-4">
+<button class="size-14 rounded-2xl border-2 border-slate-100 flex items-center justify-center text-slate-300 hover:text-primary hover:border-primary/20 transition-all shrink-0">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</button>
+<button class="flex-1 h-14 bg-indigo-custom text-white rounded-2xl font-black text-lg shadow-xl shadow-indigo-900/40 hover:bg-teal-dark transition-all flex items-center justify-center gap-3 group">
+                        Add to Cart
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">shopping_cart</span>
+</button>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
